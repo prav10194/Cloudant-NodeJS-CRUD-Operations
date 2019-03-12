@@ -81,6 +81,26 @@ var deleteDocument = function(id){
 
 }
 
+var updateDocument = function(id){
+
+  var query = {
+    "selector": {
+      "_id" : id
+    }
+  };
+
+  db.find(query, function(er, result) {
+    if (er) {
+      throw er;
+    } else {
+      fileToBeUpdated = result.docs[0];
+      db.insert(fileToBeUpdated, function(err, data){
+        console.log("Document with id: ", id, " is updated. ");
+      });
+    }
+  });
+}
+
 // The functions are not synchronized. Try one at a time and comment out others to see it's working.
 
 /*
