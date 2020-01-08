@@ -4,7 +4,11 @@
     "owner": "Pranav"
   },
   "detail": {
-    "contributors": [],
+    "contributors": [
+      {
+        "name": "Pranav"
+      }
+    ],
     "diagrams": [],
     "reviewer": "Pranav"
   }
